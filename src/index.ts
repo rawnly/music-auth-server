@@ -15,16 +15,11 @@ try {
   console.warn(`Failed to load .env file: ${(error as Error).message}`);
 }
 
-try {
-  getEnv();
-} catch (error) {
-  console.error(error);
-  process.exit(1);
-}
+const env = getEnv();
 
-const PORT = parseInt(process.env.port || "5000");
-const HOST = process.env.host || "0.0.0.0";
-const isDev = process.env.NODE_ENV !== "production";
+const PORT = parseInt(env.PORT || "5000");
+const HOST = env.HOST || "0.0.0.0";
+const isDev = env.NODE_ENV !== "production";
 
 const publicDir = path.resolve(__dirname, "..", "public");
 
@@ -104,7 +99,8 @@ server.get("/", async (req, res) => {
         "{{SCRIPT}}",
         script
           .replace("{{DEVELOPER_TOKEN}}", token.token)
-          .replace("{{TOKEN_EXPIRES_AT}", token.expirationTime.toString()),
+          .replace("{{TOKEN_EXPIRES_AT}", token.expirationTime.toString())
+          .replace("{{EXTENSION_DEEPLINK}}", env.EXTENSION_DEEPLINK),
       )
       .replace("{{CSS}}", style),
   );
