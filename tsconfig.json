@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strict": true,
+    "target": "ES2021",
+    "esModuleInterop": true
+  },
+  "include": [
+    "./src/index.ts"
+  ]
+}
