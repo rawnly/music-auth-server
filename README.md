@@ -10,11 +10,11 @@ Here is the updated markdown table with checkboxes indicating required variables
 
 | Variable                  | Required |
 | ------------------------- | -------- |
-| `NODE_ENV`                | [ ]      |
-| `PRODUCTION_DOMAIN`       | [x]      |
-| `HOST`                    | [ ]      |
-| `PORT`                    | [ ]      |
-| `PRIVATE_KEY`             | [x]      |
-| `KID`                     | [x]      |
-| `APPLE_DEVELOPER_TEAM_ID` | [x]      |
-| `EXTENSION_DEEPLINK`      | [x]      |
+| `NODE_ENV`                | ❌       |
+| `PRODUCTION_DOMAIN`       | ✅       |
+| `HOST`                    | ❌       |
+| `PORT`                    | ❌       |
+| `PRIVATE_KEY`             | ✅       |
+| `KID`                     | ✅       |
+| `APPLE_DEVELOPER_TEAM_ID` | ✅       |
+| `EXTENSION_DEEPLINK`      | ✅       |
