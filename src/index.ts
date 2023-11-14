@@ -99,7 +99,7 @@ server.get("/", async (req, res) => {
         "{{SCRIPT}}",
         script
           .replace("{{DEVELOPER_TOKEN}}", token.token)
-          .replace("{{TOKEN_EXPIRES_AT}", token.expirationTime.toString())
+          .replace("{{TOKEN_EXPIRES_AT}}", token.expirationTime.toString())
           .replace("{{EXTENSION_DEEPLINK}}", env.EXTENSION_DEEPLINK),
       )
       .replace("{{CSS}}", style),
